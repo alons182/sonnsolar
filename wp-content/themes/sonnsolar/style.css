@@ -1091,7 +1091,7 @@ img {
     width: 100%;
     height: auto;
   }
-  .intro__label {
+  .banner .intro__label {
     display: block;
   }
 }
