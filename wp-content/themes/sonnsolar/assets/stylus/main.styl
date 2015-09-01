@@ -1,0 +1,1189 @@
+/*
+Theme Name: sonnsolar
+Theme URI: http://avotz.com/
+Author: Alonso
+Author URI: http://avotz.com/
+Description: Theme for sonnsolar
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sonnsolar
+Tags:
+*/
+@import "nib"
+@import "normalize.styl"
+@import "icons.styl"
+
+
+turquesa = #4AB37E
+oscuro = #191F26
+gris = #777777
+naranja = #f37623//#FD6100
+verde = #92BC2E
+rojo = #ed1d24
+amarillo = #fec819
+*
+	box-sizing border-box
+
+body
+	font-family 'Open Sans', sans-serif
+	font-size 80%
+	line-height 30px
+	color gris
+	background url('./img/bg.png')
+
+
+
+ul
+	margin 0
+	padding 0
+	
+
+a
+	text-decoration none
+	transition all .5s ease
+	color turquesa
+	
+
+h1
+h2
+h3
+h4
+h5
+	margin-top 0
+	font-family 'Tinos', serif
+	font-weight normal
+h1
+	line-height 45px
+
+img
+	max-width 100%
+	height auto
+.clear 
+	clear both
+.right
+	right 0
+.left
+	left 0
+.alignleft
+	float left 
+	margin-right 1rem
+.alignright
+	float right 
+	margin-left 1rem	
+.txt-center
+	text-align center
+.color 
+	background-color amarillo
+.orangeColor
+	background-color naranja
+.dark
+	background-color gris
+.white
+	background-color white
+
+.transparent
+	background-color transparent
+.btn
+	padding .5rem .8rem
+	border-radius 6px
+	display inline-block
+	color white
+	transition all .5s ease
+	border 1px solid amarillo//#229b60
+	box-shadow 0 1px 1px amarillo//#216e47
+	
+	&:hover
+		background-color white
+		border-color #d6d6d6
+		box-shadow 0 1px 1px gris
+		color gris
+.download__btn
+	text-decoration none !important
+	border-color naranja
+	box-shadow 0 1px 1px #BC2E26
+	
+	&:hover
+		background-color amarillo
+		border-color amarillo
+		color white
+	
+.inline-block
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+.inline-block-2
+.inline-block-3
+	width 100%
+
+.inner
+	max-width 1170px
+	margin 0 auto
+	position relative
+	padding-left 1rem
+	padding-right 1rem
+.page-template-default 
+.single
+.error404
+.blog	
+.search
+.archive		
+	.header 
+		background-color #000
+		height 75px
+		position relative 
+		&__logo
+			padding-top 1px
+		&__menu 
+			top 70px
+		&__btn-menu
+			padding-top 20px
+.header
+	position absolute
+	height 100px
+	left 0
+	right 0
+	top 0
+	z-index 999
+	&__logo
+		display block 
+		float left
+		padding-top 30px
+		width 200px 
+		
+	&__menu
+		display none
+		position absolute
+		left 0
+		right 0
+		top 100px 
+		background-color naranja
+		text-align center
+		padding 1rem 0
+		&__item
+		.menu-item
+			display block
+			position relative
+		&__link
+		a
+			display block
+			color white
+			padding .5rem
+			//text-transform uppercase
+		.sub-menu
+			background-color amarillo  //#388860
+			
+			
+	&__btn-menu
+		padding-top 40px 
+		float right
+		background-color transparent
+		color white
+		font-size 2rem
+		border none
+		outline none
+@media screen and (min-width: 480px)
+	.header
+		&__logo
+			width 250px 
+@media screen and (min-width: 980px)
+	body
+		font-size 100%
+	.inline-block-2
+		width 48%
+	.inline-block-3
+		width 30.33%	
+	.page-template-default 
+	.single
+	.error404
+	.blog
+	.search
+	.archive			
+		.header 
+			&__menu 
+				margin-top 0
+				&__link
+				a
+					&:hover
+						border 1px solid transparent
+						box-shadow 0 1px 1px transparent
+	
+
+	.header
+		&__menu
+			position static 
+			display block
+			background-color transparent
+			float right
+			margin-top 20px
+			&__item
+			.menu-item
+				display inline-block
+				&.current
+					a 
+						border 1px solid #d3030a//#229b60
+						box-shadow 0 1px 1px #d3030a//#216e47
+						background-color naranja
+			&__link
+			a
+				padding .5rem .8rem
+				border-radius 6px
+				color white
+				transition all .5s ease
+				border 1px solid transparent
+				//text-transform lowercase
+				&:hover
+					border 1px solid #f26a0d//#229b60
+					box-shadow 0 1px 1px #f26a0d//#216e47
+					background-color naranja
+			.sub-menu
+				position absolute
+				display none
+				width 250px
+				top 54px
+				text-align left
+				
+				&__item
+				.menu-item
+					display block
+				&__link
+				a
+					display block
+					border-radius 0
+					padding .5rem 2rem
+					color white
+					transition all .5s ease
+					&:hover
+						border 1px solid naranja //#229b60
+						box-shadow 0 1px 1px naranja //#216e47
+						background-color naranja
+						color white
+
+				
+				
+				
+		&__btn-menu
+			display none	
+				
+	
+			
+
+.banner
+	width 100%
+	overflow hidden
+	position relative
+	&__video
+		position relative
+		max-height 650px
+		background-image url('./img/banner2.jpg');
+		background-repeat no-repeat
+		background-size cover 
+		background-position center center
+		
+		&:after
+			position absolute
+			content ''
+			background-image url('./img/pattern.png')
+			background-repeat repeat 
+			//background-color rgba(0, 0, 0, .75)
+			top 0
+			bottom 0
+			left 0
+			right 0
+		video 
+			width 100%
+	.intro__label
+		position absolute
+		left 50%
+		right 0
+		top 50%
+		z-index 999
+		transform translate(-50%, 0)
+		text-align center
+	&__slide
+		width 100%
+		max-height 600px
+	&__pager
+		position absolute
+		right 1rem 
+		bottom 1rem
+		z-index 998 
+		span 
+			font-size 3rem
+			color white
+			cursor pointer
+		.cycle-pager-active
+			color rojo
+	//background url('./img/intro-bg.jpg') left top no-repeat
+	/*background-size cover
+	overflow hidden
+	width 100%
+	display block
+	text-align left*/
+	
+
+	
+	/*> div 
+		height: 350px
+		position: relative;
+		top: 0;
+		z-index: 5;
+		background-color: #000;
+		overflow: hidden;
+		cursor: pointer;
+		
+	&__label
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 0
+		right 0
+		text-align: center;
+		pointer-events: none;
+		color #FFF
+		z-index 10
+		transition all .5s ease
+		
+		span 
+			text-transform uppercase
+			font-weight bold
+			font-size 2.5rem
+		.btn 
+			padding 0rem 1rem
+	&__content
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		
+		a 
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+		
+		&:hover
+			video
+				opacity 1
+				visibility: visible
+				//width 1284px
+			
+		
+		video
+			width auto
+			height 100
+			transition all .5s ease
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+			transform-origin: center center;
+			
+	&__layer-1
+		width 100%
+		left 0
+		transition all .5s ease
+		
+		
+		.intro__content
+			background-image url('./img/home/hp-profiles.jpg')
+			background-position left center
+			position: absolute;
+			
+		
+			
+	&__layer-2
+		z-index: 6;
+		width: 100%;
+		right: 0;
+		transition all .5s ease
+		
+		
+		.intro__content
+			right: 0;
+			width: 100%;
+			background-image: url('./img/home/hp-right.jpg');
+			background-position: right center;
+			
+		
+	&__scroll
+		z-index 10
+		display none
+		position absolute
+		bottom 1rem
+		left 0
+		right 0
+		text-align center
+		&__link
+			color white
+			font-size 12px
+			display block
+			text-shadow 0px 1px 0px rgba(0, 0, 0, .45)
+			
+		i 
+			margin-left .5rem
+			font-size 1.5rem
+			vertical-align middle
+	*/
+			 
+@media screen and (min-width: 640px)
+	.intro
+		&__content	
+			video
+				width 100%
+				height auto	
+@media screen and (min-width: 1024px)
+	.intro
+		height 100vh //700px//100vh;
+		
+		> div 
+			height: 100vh //700px //100%;
+			position: absolute;
+			
+		&__label
+			width: 400px;
+			a 
+				font-size 3rem
+				padding 1rem
+			//left: 50%;
+			//right auto
+			//margin-left: -100px;
+
+		&__content
+				
+			video
+				width auto
+				height 100% 
+	
+				
+		&__layer-1
+			width 50%	
+					
+			.intro__label
+				transition all .5s ease
+				left 20%
+			&:hover
+				.intro__label 
+					left 30%
+					opacity 0.3
+			
+				
+			
+				
+		&__layer-2
+			width: 50%;
+				
+			.intro__label
+				left 38%
+				transition all .5s ease
+				
+			&:hover
+				.intro__label
+					left 35%
+					opacity 0.3
+		
+		.expand
+			width 65%
+			z-index 8	
+			
+		&__scroll
+			display block
+/*		
+.slider
+	padding-top 2.5rem
+	padding-bottom 2rem
+	img 
+		width 100%
+		display inline-block
+	&__title
+		text-align center
+		font-size 2.5rem
+		padding-bottom 1.5rem
+	.cycle-pager
+		margin-top 1rem
+		text-align center
+		span
+			color #d6d6d6
+			cursor pointer
+			font-size 2.5rem
+			padding .3rem
+		&-active
+			color verde !important*/
+.logos
+	text-align center
+	padding-top 1.5rem
+	padding-bottom 1.5rem
+	&__link
+		margin 0 1rem
+		display inline-block
+.featured
+	overflow hidden
+	&__title
+		text-align center
+		color white
+		padding 1.2rem 0
+		margin 0
+		
+	&__item
+		display block
+		width 100%
+		height 337px
+		position relative
+		overflow hidden
+		transition all .5s ease 
+		
+		&:hover
+			.overlay
+				opacity 1
+			.featured__item__img
+				transform scale(1.1,1.1) 
+		
+		&__img 
+			background-position center center
+			background-size cover
+			background-repeat no-repeat
+			height 337px
+			transition all .5s ease 
+		&__info
+			display inline-block
+			vertical-align middle
+			color white
+			padding 2.5rem 1rem
+			
+			
+			i 
+				font-size 4rem
+		&__title
+		&__description
+			margin 0
+			font-size 12px
+			line-height 25px
+		&__title
+			font-weight bold
+			text-transform uppercase
+			font-size 1.5rem
+		&__link
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+		.overlay
+			text-align center
+			background-color rgba(0, 0, 0, .40)
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+			opacity 1
+					
+
+				
+@media screen and (min-width: 480px)
+	.featured
+		&__item
+			display inline-block
+			width 50%
+			float left
+@media screen and (min-width: 1024px)
+	.featured
+		&__item
+			width 33.33%
+			
+			.overlay
+				opacity 0
+@media screen and (min-width: 1280px)
+	.featured
+		&__item
+			width 25%
+
+@media screen and (min-width: 1680px)
+	.featured
+		&__item
+			height 436px
+			&__description
+				
+				font-size 16px
+				line-height 25px
+			&__img
+				height 436px
+			&__info
+				padding 4.5rem 1rem				
+.type-products
+.type-page
+	background-color white
+	padding 1rem
+	box-shadow: inset 0 0 0 1px #DFDFD0;
+.type-products
+	.ssba
+	.kk-star-ratings	
+		display none
+	.download__btn
+		position absolute
+		top 286px
+		left 53px	
+.features
+	
+	&__item 
+		box-shadow: inset 0 0 0 1px #DFDFD0;
+		border-radius 3px
+		padding .5rem
+		margin-bottom 1rem
+		
+		
+		&__img
+			margin-top -20px 
+			img 
+				width 100%
+		
+		h2
+			text-align center
+			background-color amarillo
+			color white
+			
+		h3 
+			text-align center
+			color rojo		
+.blog
+.single	
+.search
+.archive		
+	.content 
+		overflow hidden
+		width 100%
+	
+	.comments-area
+	.widget-area
+	.author-area
+	.related-posts-area
+	.no-results 				
+		background-color white
+		padding 1rem
+		box-shadow: inset 0 0 0 1px #DFDFD0;
+		margin-bottom 1rem	
+	.entry-title 
+		a 
+			color white
+			text-decoration none
+		&:hover
+			a
+				text-decoration underline
+	.entry-content
+		overflow hidden			
+	.entry-image-container
+		overflow hidden
+		&:hover
+			.entry-image
+				transform: scale(1.1, 1.1);
+		
+	.entry-image
+		background-position center center
+		background-size cover
+		background-repeat no-repeat
+		height 350px
+		position relative
+		transition all .5s ease
+		
+		a 
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			right 0
+		
+			
+	.more-link
+		padding .5rem .8rem
+		border-radius 6px
+		display inline-block
+		color white
+		transition all .5s ease
+		border 1px solid naranja
+		background-color naranja
+		text-decoration none
+		box-shadow 0 1px 1px #BC2E26
+		&:hover
+			background-color white
+			border-color #d6d6d6
+			box-shadow 0 1px 1px gris
+			color gris
+					
+				
+	.widget-area	
+		.widget-title
+			font-size 1.5rem
+		.widget 
+			margin-bottom 1rem
+			font-size 14px	
+		.widget_search
+			input[type="text"]
+			input[type="search"]	
+				
+				border 1px solid #DFDFD0
+				height 34px
+				width 100%	
+			.search-submit
+			.screen-reader-text	
+				display none
+					
+	.comments-area
+		.comment-list
+			font-size 14px 
+			background-color #F6F6F6
+			padding 1rem 2rem
+		input[type="text"]
+		input[type="email"]
+		input[type="url"]	
+		textarea	
+			border 1px solid #DFDFD0
+			height 34px
+			width 100%
+		textarea
+			height auto	
+		input[type="submit"]
+			padding .5rem .8rem
+			border-radius 6px
+			display inline-block
+			color white
+			transition all .5s ease
+			border 1px solid naranja
+			background-color naranja
+			text-decoration none
+			box-shadow 0 1px 1px #BC2E26
+				
+  				
+	.post
+		background-color white
+		padding 1rem
+		box-shadow: inset 0 0 0 1px #DFDFD0;
+		margin-bottom 1rem			
+
+	.post-views
+		display inline-block
+		margin-left 1rem
+	.author-avatar
+		float left
+		margin-right 1rem 
+	.author-title
+		margin-bottom 5px
+		color #000
+	.author-bio
+		font-size 14px
+		margin-top 0
+		margin-bottom 1rem			
+.content
+	padding-top 2.5rem
+	padding-bottom 2.5rem
+	a 
+		text-decoration underline
+		&:hover
+			text-decoration none
+	ul 
+		margin-left 45px
+		margin-bottom 25px
+	.entry-title
+		background-color amarillo
+		text-align center
+		color white
+	&__title
+		text-align center
+		font-size 2rem
+		color #2f2f2f
+		padding-bottom 1.5rem
+	&__container
+		text-align center
+		
+	&__item
+		display inline-block
+		width 100%
+		position relative
+		margin-bottom 1rem
+		background-position center center 
+		background-size cover 
+		background-repeat no-repeat
+		height 240px
+		border-radius 20px
+		
+			
+		.overlay
+			border-radius 20px
+		&__link
+			border 2px solid #F7F7F7
+			border-radius 20px
+			text-align center
+			line-height 60px
+			font-weight bold
+			font-size 2rem
+			display block 
+			position absolute
+			z-index 100
+			top 0
+			bottom 0
+			left 0
+			right 0
+			margin auto
+			width 100%
+			height 100%
+			color white
+			overflow hidden
+			transition none
+			&:hover
+				box-shadow 0px 0px 10px rgba(0, 0, 0, .75)
+		&__caption
+			position absolute
+			background rgba(0, 0, 0, .55)
+			left 0
+			right 0
+			bottom 0
+			text-align center
+			color white
+			border-radius 0 0 30px 30px
+	&__banner
+		height 350px 
+		width 100%
+		background-position center center
+		background-size cover
+		background-repeat no-repeat
+		margin-bottom 1rem
+	
+	&__contact
+		text-align center
+		position relative
+		
+		&__map
+			iframe
+				width 100%
+				height 350px
+				border none
+			
+	
+		input[type="text"]
+		input[type="email"]
+			height 30px
+			width 100%
+		textarea
+			width 100%
+			
+		input[type="submit"]
+			background-color naranja
+			padding .3rem
+			font-size 1.5rem
+			text-transform uppercase
+			color white
+			display inline-block
+			border 2px solid naranja
+			&:hover
+				background-color verde 
+				color white
+				border-color verde
+		
+		&__social
+			text-align center
+			&__item 
+				display inline-block
+				margin .2rem
+				&:first-child
+					.content__contact__social__link
+						padding .8rem 1rem	
+			&__link
+				display block
+				background-color verde
+				color white
+				font-size 1.5rem
+				line-height 0
+				padding .8rem
+				border-radius 50%
+				text-decoration none !important
+				&:hover
+					background-color #000
+.faqs
+	&__question
+		color #000
+		font-weight bold
+		border-bottom 2px solid #000
+		text-transform uppercase	
+
+@media screen and (min-width: 640px)
+	.content 
+		&__contact
+			
+			input[type="text"]
+			input[type="email"]
+			textarea	
+				width auto
+		
+				
+@media screen and (min-width: 1024px)
+
+	.content
+		&__contact
+			text-align left
+			&__form
+				margin-left 5rem
+			&__info
+				position absolute
+				right 8rem
+				top 6rem
+				max-width 350px
+			&__social
+			.share
+				position absolute
+				bottom 14rem 
+				right 17.5rem
+		&__container
+			display flex
+			justify-content space-around
+			flex-wrap wrap
+			width 980px
+			margin 0 auto		
+		&__item
+			height 310px
+			&--1
+				width 58%
+			&--2
+				width 40%
+			
+			&--4
+			&--5
+				width 49%
+	.blog
+	.single	
+	.search
+	.archive		
+		.posts-area	
+			float left
+			width 68%
+		.widget-area
+			float right
+			width 30%
+			
+
+.call
+	padding-top 4rem
+	padding-bottom 4rem
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	color white
+	text-align center
+	
+	&__title 
+		font-size 2rem
+	&__btn
+		&.orangeColor 
+			border-color naranja
+			box-shadow 0 1px 1px #BC2E26
+			
+		&:hover
+			background-color verde
+			color white
+			border-color verde
+			box-shadow 0 1px 1px #216e47
+	&__items
+		display flex 
+		justify-content space-around
+		flex-wrap wrap
+	&__item
+		display block
+		margin-bottom 1rem
+		
+		&__title
+			background-color amarillo
+			color white
+			box-shadow 0 1px 1px #216e47
+		i 
+			font-size 3rem
+@media screen and (min-width: 1024px)
+	.call
+		&__item
+			width 22%
+
+			
+.footer
+	background-color #000
+	padding-top 1rem
+	
+	//overflow hidden
+	text-align center
+	
+	&__social
+		//margin-top 1rem
+		
+		&__link
+			display inline-block
+			font-size 1.5rem
+			color white
+			padding .5rem
+	&__menu
+		display none 
+		&__item
+		.menu-item
+			display inline-block
+		
+		&__link
+		a
+			color white
+			padding .5rem
+			font-weight bold
+			
+			&:hover
+				text-decoration underline
+			
+	&__copyright
+		color white
+		a
+			display inline-block
+			font-size 2rem
+			vertical-align middle
+			color white
+
+@media screen and (min-width: 768px)
+	.footer
+		
+		overflow hidden
+		&__logo
+		&__social
+			float left
+			margin-right 1rem
+		&__logo
+			width 120px
+			img 
+				width 100% 
+		&__menu 
+			float right
+			display block
+			&__item
+			.menu-item
+				position relative	
+			a
+			&__link
+				font-size .9rem
+				
+			.sub-menu
+				display none
+				background-color #388860
+				position absolute
+				top -150px
+				width 250px
+				text-align left
+				z-index 999
+				&__item
+				.menu-item
+					display block
+				&__link
+				a
+					display block
+					border-radius 0
+					padding .5rem 2rem
+					color white
+					transition all .5s ease
+					&:hover
+						border 1px solid #229b60
+						box-shadow 0 1px 1px #216e47
+						background-color white
+						color verde
+						text-decoration none 
+				
+		&__copyright
+			clear both
+			font-size 12px
+			
+
+.mini-contact
+	position fixed
+	right 1%
+	bottom -278px
+	overflow visible
+	z-index 999
+	display none
+	
+	
+	&.open
+		bottom 0
+	
+	&__btn 
+		background-color naranja
+		color white
+		padding .3rem 1rem
+		font-weight bold
+		display block
+		position relative
+		cursor pointer
+		bottom 0
+		transition all .5s ease
+		opacity 1
+		text-align center
+		
+		i 
+			margin-left .5rem
+			display inline-block
+			font-size 1.2rem
+			vertical-align middle
+			font-weight	bold
+		span 
+			display inline-block
+		&.open
+			i 
+				&:before
+					content '\f107'
+			
+	
+	&__form
+		opacity 1
+		position relative
+		border 1px solid #d6d6d6
+		background-color white
+		width 250px
+		overflow hidden
+		
+		
+		input[type="text"],
+		input[type="email"],
+		textarea
+			width 100%
+			margin-bottom .5rem
+		textarea
+			height 100px
+			resize none
+		input[type="submit"]
+			background-color azul
+			color white
+			border 0
+			outline 0
+			float right
+			padding .5rem
+			margin-bottom 1rem
+		.response
+			font-weight bold
+			&.message-success
+				color verde
+			&.message-error
+				color red
+		&__container
+			padding 1rem
+		
+	&__header
+		background-color azul
+		color white
+		text-align center 
+		padding .5rem		
+	&__message 
+		line-height 25px
+		text-align center
+		padding .5rem
+	&__close
+		position absolute
+		left -35px
+		background-color azul
+		color white
+		padding .5rem
+		cursor pointer
+		display block
+		border-radius 50%
+
+@media screen and (min-width: 768px)
+	.mini-contact
+		display block	
