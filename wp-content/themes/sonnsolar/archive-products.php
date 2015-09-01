@@ -12,7 +12,7 @@ get_header(); ?>
 	<section class="content">
             
 				 <h1 class="featured__title color">
-			          Products
+			          Soluciones
 			      </h1>
 			<?php
 		          $args = array(
