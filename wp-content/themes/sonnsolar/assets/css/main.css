@@ -1067,6 +1067,15 @@ img {
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   text-align: center;
+  width: 100%;
+}
+.banner .intro__label .intro__text {
+  display: block;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 42px;
 }
 .banner__slide {
   width: 100%;
@@ -1093,18 +1102,22 @@ img {
   }
   .banner .intro__label {
     display: block;
+/*.intro__text
+				font-size 5rem
+				line-height 30px*/
   }
 }
 @media screen and (min-width: 1024px) {
+  .banner .intro__label .intro__text {
+    font-size: 5rem;
+    line-height: 42px;
+  }
   .intro {
     height: 100vh;
   }
   .intro > div {
     height: 100vh;
     position: absolute;
-  }
-  .intro__label {
-    width: 400px;
   }
   .intro__label a {
     font-size: 3rem;

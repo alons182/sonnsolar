@@ -36,7 +36,17 @@
 
               </video>   
             </div>
-             <span class="intro__label"><a href="#" title="Read More" class="intro__info__btn btn color wow fadeInRight anchor">Sobre Nosotros</a></span>
+            <?php rewind_posts(); ?>
+              <?php query_posts( 'post_type=page&page_id=200' ); ?>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                        <?php get_template_part( 'template-parts/content', 'plain' ); ?>
+        
+                    <?php endwhile; ?>
+                    <!-- post navigation -->
+                  
+                <?php endif; ?>
+             
             
       <!--<div class="intro__layer-1">
           <div class="intro__content">
