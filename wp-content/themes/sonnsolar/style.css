@@ -1055,6 +1055,7 @@ img {
   width: 100%;
 }
 .banner .intro__label {
+  display: none;
   position: absolute;
   left: 50%;
   right: 0;
@@ -1089,6 +1090,9 @@ img {
   .intro__content video {
     width: 100%;
     height: auto;
+  }
+  .intro__label {
+    display: block;
   }
 }
 @media screen and (min-width: 1024px) {
