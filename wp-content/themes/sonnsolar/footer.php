@@ -38,7 +38,7 @@
             </div>
         </div>
     </footer>
-    <?php /*get_template_part( 'template-parts/mini-contact');*/?>
+    <?php get_template_part( 'template-parts/mini-contact');?>
 	
 
 <?php wp_footer(); ?>

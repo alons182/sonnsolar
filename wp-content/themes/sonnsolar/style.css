@@ -691,6 +691,9 @@ img {
   border-color: #fec819;
   color: #fff;
 }
+.hitz {
+  background-color: #b51f6e !important;
+}
 .inline-block {
   display: -webkit-box;
   display: -moz-box;
@@ -1114,7 +1117,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .banner .intro__label .intro__text {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 62px;
   }
   .intro {
@@ -1297,9 +1300,6 @@ img {
   }
 }
 @media screen and (min-width: 1024px) {
-  .featured__item {
-    width: 33.33%;
-  }
   .featured__item .overlay {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
