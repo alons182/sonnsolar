@@ -11,10 +11,11 @@ get_header(); ?>
 
 	<section class="content">
             
-				
-	         <?php
-				the_archive_title( '<h1 class="featured__title color">', '</h1>' );
-				?>
+			
+			<?php  //the_archive_title( '<h1 class="featured__title color">', '</h1>' );  ?>	
+	         <h1 class="featured__title color">
+	         	<?php single_cat_title( '', true ); ?>
+			 </h1>
 			      
 			<?php if ( have_posts() ) : ?>
 				
