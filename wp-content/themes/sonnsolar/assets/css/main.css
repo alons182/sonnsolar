@@ -2006,11 +2006,10 @@ img {
   }
   .footer__menu .sub-menu__link:hover,
   .footer__menu .sub-menu a:hover {
-    border: 1px solid #f37623;
-    -webkit-box-shadow: 0 1px 1px #f37623;
-    box-shadow: 0 1px 1px #f37623;
+    -webkit-box-shadow: 0 1px 1px #000;
+    box-shadow: 0 1px 1px #000;
     background-color: #fff;
-    color: #f37623;
+    color: #000;
     text-decoration: none;
   }
   .footer__copyright {
