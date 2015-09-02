@@ -1035,8 +1035,6 @@ img
 .footer
 	background-color #000
 	padding-top 1rem
-	
-	//overflow hidden
 	text-align center
 	
 	&__social
@@ -1064,6 +1062,7 @@ img
 			
 	&__copyright
 		color white
+		padding-bottom 1px
 		a
 			display inline-block
 			font-size 2rem
@@ -1072,8 +1071,7 @@ img
 
 @media screen and (min-width: 768px)
 	.footer
-		
-		overflow hidden
+		//overflow hidden
 		&__logo
 		&__social
 			float left
@@ -1094,9 +1092,9 @@ img
 				
 			.sub-menu
 				display none
-				background-color #388860
+				background-color #000
 				position absolute
-				top -150px
+				top -188px
 				width 250px
 				text-align left
 				z-index 999
@@ -1111,15 +1109,16 @@ img
 					color white
 					transition all .5s ease
 					&:hover
-						border 1px solid #229b60
-						box-shadow 0 1px 1px #216e47
+						border 1px solid naranja
+						box-shadow 0 1px 1px naranja
 						background-color white
-						color verde
+						color naranja
 						text-decoration none 
 				
 		&__copyright
 			clear both
 			font-size 12px
+			
 			
 
 .mini-contact

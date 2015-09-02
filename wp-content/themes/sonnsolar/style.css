@@ -1946,6 +1946,7 @@ img {
 }
 .footer__copyright {
   color: #fff;
+  padding-bottom: 1px;
 }
 .footer__copyright a {
   display: inline-block;
@@ -1954,9 +1955,6 @@ img {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .footer {
-    overflow: hidden;
-  }
   .footer__logo,
   .footer__social {
     float: left;
@@ -1982,9 +1980,9 @@ img {
   }
   .footer__menu .sub-menu {
     display: none;
-    background-color: #388860;
+    background-color: #000;
     position: absolute;
-    top: -150px;
+    top: -188px;
     width: 250px;
     text-align: left;
     z-index: 999;
@@ -2008,11 +2006,11 @@ img {
   }
   .footer__menu .sub-menu__link:hover,
   .footer__menu .sub-menu a:hover {
-    border: 1px solid #229b60;
-    -webkit-box-shadow: 0 1px 1px #216e47;
-    box-shadow: 0 1px 1px #216e47;
+    border: 1px solid #f37623;
+    -webkit-box-shadow: 0 1px 1px #f37623;
+    box-shadow: 0 1px 1px #f37623;
     background-color: #fff;
-    color: #92bc2e;
+    color: #f37623;
     text-decoration: none;
   }
   .footer__copyright {
