@@ -15,10 +15,10 @@
             <a href="#" class="footer__logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo-white.png" alt="4Energy" /></a>
             
             <div class="footer__social">
-                 <a href="#" class="footer__social__link"><i class="icon-facebook"></i></a>
+                 <a href="https://www.facebook.com/sonnsolar" target="_blank" class="footer__social__link"><i class="icon-facebook"></i></a>
                  <a href="#" class="footer__social__link"><i class="icon-twitter"></i></a>
-                 <a href="#" class="footer__social__link"><i class="icon-google-plus"></i></a>
-                 <a href="#" class="footer__social__link"><i class="icon-youtube"></i></a>
+                 <a href="https://plus.google.com/107781666735506405912" target="_blank" class="footer__social__link"><i class="icon-google-plus"></i></a>
+                 <a href="https://www.youtube.com/channel/UCY0rBHvm4AEx1I0Fq5Tl_HA" target="_blank" class="footer__social__link"><i class="icon-youtube"></i></a>
             </div>
            
             <?php
