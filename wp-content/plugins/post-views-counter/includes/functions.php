@@ -97,11 +97,16 @@ if ( ! function_exists( 'pvc_get_most_viewed_posts' ) ) {
 
 		$args = apply_filters( 'pvc_get_most_viewed_posts_args', $args );
 
-		// forces to use filters and post views as order
+		// force to use filters
 		$args['suppress_filters'] = false;
+
+		// force to use post views as order
 		$args['orderby'] = 'post_views';
 
-		return get_posts( $args );
+		// force to get all fields
+		$args['fields'] = '';
+
+		return apply_filters( 'pvc_get_most_viewed_posts', get_posts( $args ), $args );
 	}
 
 }
