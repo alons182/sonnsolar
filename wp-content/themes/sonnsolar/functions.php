@@ -156,9 +156,12 @@ function authorNotification($post_id) {
 
       $message = "
          Hola Administrador,
-         ".$author->display_name." Acaba de crear el articulo ".$post->post_title." como borrador. Revisalo y luego publicalo si es correcto! 
+         ".$author->display_name." Acaba de crear el articulo ".$post->post_title." pendiente de revisión. Puedes publicarlo si es correcto! 
       ";
-      wp_mail($author->user_email, "Se creó un articulo como borrador", $message);
+      
+      $user = get_user_by( 'login', '4energy' );
+
+      wp_mail($user->user_email, "Se creó un articulo pendiente de revisión", $message);
    }
    add_action('pending_post', 'authorNotification');
 /**
