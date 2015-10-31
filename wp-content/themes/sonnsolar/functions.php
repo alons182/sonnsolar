@@ -160,7 +160,7 @@ function authorNotification($post_id) {
       ";
       wp_mail($author->user_email, "Se creó un articulo como borrador", $message);
    }
-   add_action('draft_post', 'authorNotification');
+   add_action('pending_post', 'authorNotification');
 /**
  * Implement the Custom Header feature.
  */
