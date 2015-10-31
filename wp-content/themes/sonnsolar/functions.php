@@ -155,10 +155,10 @@ function authorNotification($post_id) {
       $author = get_userdata($post->post_author);
 
       $message = "
-         Hi ".$author->display_name.",
-         Your post, ".$post->post_title." has just been draf. Well done! 
+         Hola Administrador,
+         ".$author->display_name." Acaba de crear el articulo ".$post->post_title." como borrador. Revisalo y luego publicalo si es correcto! 
       ";
-      wp_mail($author->user_email, "Your article is online", $message);
+      wp_mail($author->user_email, "Se creó un articulo como borrador", $message);
    }
    add_action('draft_post', 'authorNotification');
 /**
