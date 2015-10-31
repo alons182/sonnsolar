@@ -39,6 +39,10 @@
         </div>
     </footer>
     <?php get_template_part( 'template-parts/mini-contact');?>
+     <div id="catalogue" class="download-catalogue-form white-popup mfp-with-anim">
+                  <?php get_template_part( 'template-parts/contact', 'catalogue' );   ?>
+                 
+      </div>
 	
 
 <?php wp_footer(); ?>

@@ -72,7 +72,7 @@ if ( ! function_exists( 'fourenergy_posted_on' ) ) :
 function fourenergy_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -83,12 +83,12 @@ function fourenergy_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'fourenergy' ),
+		esc_html_x( 'Publicado el %s', 'post date', 'fourenergy' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'fourenergy' ),
+		esc_html_x( 'por %s', 'post author', 'fourenergy' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -107,7 +107,7 @@ function fourenergy_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'fourenergy' ) );
 		if ( $categories_list && fourenergy_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'fourenergy' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Publicado en %1$s', 'fourenergy' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -119,7 +119,7 @@ function fourenergy_entry_footer() {
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'fourenergy' ), esc_html__( '1 Comment', 'fourenergy' ), esc_html__( '% Comments', 'fourenergy' ) );
+		comments_popup_link( esc_html__( 'Deja un comentario', 'fourenergy' ), esc_html__( '1 Comment', 'fourenergy' ), esc_html__( '% Comments', 'fourenergy' ) );
 		echo '</span>';
 	}
 

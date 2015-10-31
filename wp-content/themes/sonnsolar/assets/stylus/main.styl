@@ -61,6 +61,37 @@ h1
 img
 	max-width 100%
 	height auto
+input[type="text"]
+input[type="email"]
+	height 30px
+	width 100%
+textarea
+	width 100%
+	
+input[type="submit"]
+	background-color naranja
+	padding .3rem
+	//font-size 1.5rem
+	text-transform uppercase
+	color white
+	display inline-block
+	border 2px solid naranja
+	&:hover
+		background-color verde 
+		color white
+		border-color verde
+.intro-form
+	font-size 15px
+.response
+	font-weight bold
+	font-size 14px
+	line-height 25px
+	&.message-success
+		color verde
+	&.message-error
+		color red
+.loader
+	display none
 .clear 
 	clear both
 .right
@@ -893,25 +924,7 @@ img
 				border none
 			
 	
-		input[type="text"]
-		input[type="email"]
-			height 30px
-			width 100%
-		textarea
-			width 100%
-			
-		input[type="submit"]
-			background-color naranja
-			padding .3rem
-			font-size 1.5rem
-			text-transform uppercase
-			color white
-			display inline-block
-			border 2px solid naranja
-			&:hover
-				background-color verde 
-				color white
-				border-color verde
+		
 		
 		&__social
 			text-align center
@@ -1181,19 +1194,14 @@ img
 			height 100px
 			resize none
 		input[type="submit"]
-			background-color azul
+			background-color amarillo
 			color white
 			border 0
 			outline 0
 			float right
 			padding .5rem
 			margin-bottom 1rem
-		.response
-			font-weight bold
-			&.message-success
-				color verde
-			&.message-error
-				color red
+		
 		&__container
 			padding 1rem
 		

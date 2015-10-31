@@ -99,28 +99,45 @@
       $('.mini-contact').removeClass('open');    
   });
 
+  $('.catalogue-link').magnificPopup({
+
+        type:'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = this.st.el.attr('data-effect');
+            }
+
+        }
+    });
+
    // Forms with ajax process
     $('form[data-remote]').on('submit', function(e){
         var form =$(this);
         var method = form.find('input[name="_method"]').val() || 'POST';
         var url = form.prop('action');
+        var delay = form.data('delay-message') || 4500;
         form.find('.loader').show();
         $.ajax({
             type: method,
             url: url,
             data: form.serialize(),
-            success: function(){
+            success: function(res){
                 var message = form.data('remote-success-message');
                 form.find('.loader').hide();
-                if(message)
+                
+                if(!res)
                 {
+                    $('.response').removeClass('message-error').addClass('message-success').html(message).fadeIn(300).delay(delay).fadeOut(300);
+                }else
+                    $('.response').removeClass('message-success').addClass('message-error').html(res).fadeIn(300).delay(delay).fadeOut(300);
 
-                    $('.response').removeClass('message-error').addClass('message-success').html(message).fadeIn(300).delay(4500).fadeOut(300);
-                }
             },
             error:function(){
                 form.find('.loader').hide();
-                $('.response').removeClass('message-success').addClass('message-error').html('Whoops, looks like something went wrong.').fadeIn(300).delay(4500).fadeOut(300);
+                $('.response').removeClass('message-success').addClass('message-error').html('Whoops, looks like something went wrong.').fadeIn(300).delay(delay).fadeOut(300);
 
             }
         });
