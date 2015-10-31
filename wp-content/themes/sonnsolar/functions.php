@@ -135,6 +135,22 @@ function fourenergy_favicon() {
     echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_template_directory_uri().'/favicon.ico" />';
 }
 add_action('wp_head', 'fourenergy_favicon');
+
+/**
+ * Informar cuando alguie publica un post
+ */
+function authorNotification($post_id) {
+      global $wpdb;
+      $post = get_post($post_id);
+      $author = get_userdata($post->post_author);
+
+      $message = "
+         Hi ".$author->display_name.",
+         Your post, ".$post->post_title." has just been draf. Well done! 
+      ";
+      wp_mail($author->user_email, "Your article is online", $message);
+   }
+   add_action('draft_post', 'authorNotification');
 /**
  * Implement the Custom Header feature.
  */
