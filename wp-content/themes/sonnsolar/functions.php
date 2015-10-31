@@ -147,7 +147,7 @@ function my_awesome_email_from_name() {
 	return "Sonnsolar";
 }
 /**
- * Informar cuando alguie publica un post
+ * Informar cuando alguien crea un post para revision
  */
 function authorNotification($post_id) {
       global $wpdb;
@@ -158,12 +158,13 @@ function authorNotification($post_id) {
          Hola Administrador,
          ".$author->display_name." Acaba de crear el articulo ".$post->post_title." pendiente de revisión. Puedes publicarlo si es correcto! 
       ";
-      
+
       $user = get_user_by( 'login', '4energy' );
 
       wp_mail($user->user_email, "Se creó un articulo pendiente de revisión", $message);
    }
-   add_action('pending_post', 'authorNotification');
+add_action('pending_post', 'authorNotification');
+
 /**
  * Implement the Custom Header feature.
  */
