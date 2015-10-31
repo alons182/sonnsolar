@@ -39,7 +39,7 @@
         </div>
     </footer>
     <?php get_template_part( 'template-parts/mini-contact');?>
-     <div id="catalogue" class="download-catalogue-form white-popup mfp-with-anim">
+     <div id="catalogue" class="download-catalogue-form white-popup mfp-with-anim mfp-hide">
                   <?php get_template_part( 'template-parts/contact', 'catalogue' );   ?>
                  
       </div>
