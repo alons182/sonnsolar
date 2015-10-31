@@ -136,6 +136,16 @@ function fourenergy_favicon() {
 }
 add_action('wp_head', 'fourenergy_favicon');
 
+	
+add_filter ("wp_mail_from", "my_awesome_mail_from");
+function my_awesome_mail_from() {
+	return "info@sonnsolar.com";
+}
+	
+add_filter ("wp_mail_from_name", "my_awesome_mail_from_name");
+function my_awesome_email_from_name() {
+	return "Sonnsolar";
+}
 /**
  * Informar cuando alguie publica un post
  */
