@@ -41,7 +41,10 @@ if($result==''){
 	$to = $email;
 	$subject = 'Envio de catalogo de productos';
 	$body = 'Archivo de catalogo adjunto en este correo. Gracias';
-	$headers = array('Content-Type: text/html; charset=UTF-8');
+
+  $headers[] = 'From: Sonnsolar <info@sonnsolar.com>';
+  $headers[] = 'Cc: info@sonnsolar.com'; // note you can just use a simple email address
+  $headers[] = 'Content-Type: text/html; charset=UTF-8'; // note you can just use a simple email address
 
 	if(!wp_mail( $to, $subject, $body, $headers, $attachments ))
   {
