@@ -11,7 +11,7 @@
     <label>Correo</label>
     <input type="email" name="email" id="email" required />
     </p>
-    <input type="hidden" name="list" value="Guanacaste Vende" />
+    <input type="hidden" name="list" value="SonnSolar" />
     <input type="hidden" name="attachment" value="/uploads" />
     <input type="submit" class="color" value="Solicitar">
     <p>

@@ -12,7 +12,8 @@ class MailchimpNewsletter {
     protected $mailchimp;
 
     protected $list = [
-        'Guanacaste Vende' => '26da74adbd'
+        'SonnSolar' => 'd76e6fe356',
+
     ];
 
     function __construct()
