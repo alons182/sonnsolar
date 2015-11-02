@@ -142,10 +142,10 @@ function my_awesome_mail_from() {
 	return "info@sonnsolar.com";
 }
 	
-add_filter ("wp_mail_from_name", "my_awesome_mail_from_name");
+/*add_filter ("wp_mail_from_name", "my_awesome_mail_from_name");
 function my_awesome_email_from_name() {
 	return "Sonnsolar";
-}
+}*/
 /**
  * Informar cuando alguien crea un post para revision
  */
