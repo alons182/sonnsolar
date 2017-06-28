@@ -36,7 +36,7 @@ if($result==''){
 	$mailchimp->subscribeTo($list, $email, $name, '');
 
 
-	$attachments = array( WP_CONTENT_DIR . '/uploads/2015/08/02-Brochure-TERMOSIFON.pdf' );
+	$attachments = array( WP_CONTENT_DIR . '/uploads/2017/06/SONNSOLAR-Brochure-Empresarial.pdf' );
 
 	$to = $email;
 	$subject = 'Envio de catalogo de productos';
